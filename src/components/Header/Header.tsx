@@ -6,15 +6,17 @@ import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import SettingsIcon from '@mui/icons-material/Settings';
 import HeaderUserProfile from './HeaderUserProfile';
 import { grey } from '@mui/material/colors';
+import { useTheme } from '@emotion/react';
 
 
 const Header: React.FC = () => {
+
 
     const IconComponent = ({ children }: { children: React.ReactNode }) => {
         return (
             <IconButton
                 sx={{
-                    color: grey[200],
+                    color: 'primary.light',
                     background: grey[800],
                     '&:hover': {
                         color: grey[900],
@@ -31,7 +33,7 @@ const Header: React.FC = () => {
 
 
     return (
-        <AppBar position="static" style={{ backgroundColor: grey[900],boxShadow:'none',padding:'5px 0px' }}>
+        <AppBar position="static" style={{ backgroundColor: "#202028",boxShadow:'none',padding:'5px 0px' }}>
             <Toolbar>
                 <Box flex={1} sx={{ display: { xs: 'none', sm: 'block' }}}>
                     <InputBase

@@ -46,7 +46,7 @@ const Sidebar: React.FC = () => {
 
 
   return (
-    <Box width={100} bgcolor={grey[900]} p={2} sx={{ display: "flex", flexDirection: "column", justifyContent: "space-between", alignItems: "center" }}>
+    <Box width={100} bgcolor={'secondary.main'} p={2} sx={{ display: "flex", flexDirection: "column", justifyContent: "space-between", alignItems: "center" }}>
       <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
         <Box>
           <GridViewIcon sx={{ color: blue[600], fontSize: "40px" }} />
