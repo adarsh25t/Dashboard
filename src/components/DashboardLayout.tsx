@@ -6,7 +6,7 @@ import Header from './Header/Header';
 
 const DashboardLayout: React.FC = () => {
     return (
-        <Box display="flex" height="100vh">
+        <Box display="flex" height="auto" >
           <Sidebar />
           <Box flex={1} display="flex" flexDirection="column">
             <Header />
