@@ -6,6 +6,7 @@ import ActivityWidget from './widgets/ActivityWidget'
 import RecentOrdersWidget from './widgets/RecentOrdersWidget'
 import FeedbackWidget from './widgets/FeedbackWidget'
 import ProfiltWidget from './widgets/ProfiltWidget'
+import FeatureSection from './widgets/FeatureSection'
 
 const DashboardContent: React.FC = () => {
   return (
@@ -26,7 +27,7 @@ const DashboardContent: React.FC = () => {
           </Grid>
 
           <Grid item xs={12} sm={6} md={4}>
-            <ActivityWidget />
+            <FeatureSection />
           </Grid>
 
 
