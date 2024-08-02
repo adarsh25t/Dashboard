@@ -16,7 +16,7 @@ const theme = createTheme({
     background: {
       default: '#141416',
     },
-  },
+  }
 });
 
 const App: React.FC = () => {
