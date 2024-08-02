@@ -1,8 +1,37 @@
+import { Box, Card, CardContent, Grid, Typography } from '@mui/material'
+import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
 import React from 'react'
+import CircularWithValueLabel from './CircularProgressWithLabel';
 
-function ProfiltWidget() {
+
+
+const ProfiltWidget: React.FC = () => {
   return (
-    <div>ProfiltWidget</div>
+    <Card sx={{
+      backgroundColor: "secondary.main",
+      color: "primary.light",
+      '&:hover': {
+        backgroundColor: "secondary.light",
+        transition: 'all 0.4s ease',
+        cursor: "pointer",
+        color: "secondary.main"
+      },
+      height: { xs: "100%", sm: "100%", md: "150px" },
+    }}>
+
+      <CardContent sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }} >
+        <Box sx={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+          <Typography variant='subtitle1'>Net Profit</Typography>
+          <Typography variant='h4' color="primary.light" fontWeight={"bold"}>$ 6759.25</Typography>
+          <Typography variant='subtitle1' color="green">
+            <ArrowDropUpIcon />
+            3%
+          </Typography>
+        </Box>
+        <CircularWithValueLabel />
+      </CardContent>
+    </Card>
+
   )
 }
 
