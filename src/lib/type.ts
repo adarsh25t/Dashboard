@@ -12,6 +12,7 @@ export interface CardItemProps {
     percentage: string;
     iconBgColor: string;
     percentageColor: string;
+    iconColor: string;
 }
 
 export interface FeedbackProps {

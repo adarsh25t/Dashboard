@@ -5,8 +5,8 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import SettingsIcon from '@mui/icons-material/Settings';
 import HeaderUserProfile from './HeaderUserProfile';
-import { grey } from '@mui/material/colors';
-import { useTheme } from '@emotion/react';
+import { blue, grey } from '@mui/material/colors';
+import Barmenu from './Barmenu';
 
 
 const Header: React.FC = () => {
@@ -17,9 +17,10 @@ const Header: React.FC = () => {
             <IconButton
                 sx={{
                     color: 'primary.light',
+                    height: 40,
                     background: grey[800],
                     '&:hover': {
-                        color: grey[900],
+                        color: blue[700],
                         background: grey[700],
                         transition: 'all 0.7s ease',
                     },
@@ -33,17 +34,33 @@ const Header: React.FC = () => {
 
 
     return (
-        <AppBar position="static" style={{ backgroundColor: "#202028",boxShadow:'none',padding:'5px 0px' }}>
-            <Toolbar>
-                <Box flex={1} sx={{ display: { xs: 'none', sm: 'block' }}}>
+        <AppBar
+            style={{
+                backgroundColor: "#202028",
+                boxShadow: 'none',
+                padding: '5px 0px',
+                position: "sticky",
+                display: 'flex',
+                justifyContent: 'center',
+
+            }}
+
+        >
+            <Toolbar sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                <Box flex={1} sx={{ display: { xs: 'none', sm: 'block' } }}>
                     <InputBase
                         placeholder="Search…"
-                        sx={{ color: grey[400], background: grey[800], borderRadius: '5px', padding: '5px',minWidth:"350px" }}
-                        startAdornment={<SearchIcon sx={{paddingRight:"5px"}}/>}
+                        sx={{ color: grey[400], background: grey[800], borderRadius: '5px', padding: '5px', minWidth: "350px" }}
+                        startAdornment={<SearchIcon sx={{ paddingRight: "5px" }} />}
                     />
                 </Box>
+                
+                <Box sx={{ display: { xs: 'block', sm: 'none' } }}>
+                    <Barmenu />
+                </Box>
+                
                 <Box display="flex" gap={3}>
-                    <Box display="flex" gap={1}>
+                    <Box  gap={1} sx={{ display: { xs: 'none', sm: 'flex',alignItems: 'center' } }}>
                         <IconComponent>
                             <MailOutlineIcon />
                         </IconComponent>
@@ -56,6 +73,7 @@ const Header: React.FC = () => {
                             <NotificationsIcon />
                         </IconComponent>
                     </Box>
+                    
                     <Box>
                         <HeaderUserProfile />
                     </Box>

@@ -9,11 +9,12 @@ import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 const TotalOrdersWidget: React.FC = () => {
 
-  const CardItem: React.FC<CardItemProps> = ({ title, value, icon, percentage, iconBgColor, percentageColor }) => {
+  const CardItem: React.FC<CardItemProps> = ({ title, value, icon, percentage, iconBgColor,iconColor, percentageColor }) => {
     return (
       <Card sx={{ 
         backgroundColor: "secondary.main", 
         color: "primary.light",
+        borderRadius:"10px",
         '&:hover': {
           backgroundColor: "secondary.light",
           transition: 'all 0.4s ease',
@@ -31,7 +32,7 @@ const TotalOrdersWidget: React.FC = () => {
             justifyContent: "center",
             alignItems: "center",
             borderRadius: "10px",
-            color: iconBgColor,
+            color: iconColor,
           }}>
             {icon}
           </Box>
@@ -51,43 +52,47 @@ const TotalOrdersWidget: React.FC = () => {
   return (
     <Box>
       <Grid container spacing={2}>
-        <Grid item xs={12} sm={6} md={3}>
+        <Grid item xs={6} sm={6} md={3}>
           <CardItem
             title={"Total Orders"}
             value={"75"}
             icon={<StorefrontOutlinedIcon />}
             percentage={"3%"}
-            iconBgColor={"rgba(72, 98, 255, 0.64)"}
+            iconBgColor={"rgba(72, 98, 255, 0.24)"}
+            iconColor={"#4C55FF"}
             percentageColor={"green"}
           />
         </Grid>
-        <Grid item xs={12} sm={6} md={3}>
+        <Grid item xs={6} sm={6} md={3}>
           <CardItem
             title={"Total Delivered"}
             value={"70"}
             icon={<ShoppingBagOutlinedIcon />}
             percentage={"3%"}
-            iconBgColor={"rgba(67, 160, 71, 0.5)"}
+            iconBgColor={"rgba(67, 160, 71, 0.3)"}
+            iconColor={"#43A047"}
             percentageColor={"red"}
           />
         </Grid>
-        <Grid item xs={12} sm={6} md={3}>
+        <Grid item xs={6} sm={6} md={3}>
           <CardItem
             title={"Total Cancelled"}
             value={"05"}
             icon={<ShoppingBagOutlinedIcon />}
             percentage={"3%"}
-            iconBgColor={"rgba(255, 138, 101, 0.56)"}
+            iconBgColor={"rgba(255, 138, 101, 0.28)"}
+            iconColor={"#FF8A65"}
             percentageColor={"green"}
           />
         </Grid>
-        <Grid item xs={12} sm={6} md={3}>
+        <Grid item xs={6} sm={6} md={3}>
           <CardItem
             title={"Total Revenue"}
             value={"$12k"}
             icon={<CurrencyExchangeOutlinedIcon />}
             percentage={"3%"}
-            iconBgColor={"rgba(192, 33, 96, 0.53)"}
+            iconBgColor={"rgba(192, 33, 96, 0.23)"}
+            iconColor={"#C02160"}
             percentageColor={"red"}
           />
         </Grid>

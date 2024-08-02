@@ -1,6 +1,18 @@
+import { Box, Tooltip, Typography } from '@mui/material';
 import { BarChart } from '@mui/x-charts/BarChart';
-import { Box, Typography } from '@mui/material'
 import React from 'react'
+
+const pData = [
+  { value: 4000 }, { value: 3000 }, { value: 2000 },
+  { value: 2780 }, { value: 1890 }, { value: 2390 },
+  { value: 3490 }, { value: 4000 }, { value: 3000 },
+  { value: 2000 }, { value: 2780 }, { value: 1890 },
+  { value: 2390 }, { value: 3490 }, { value: 4000 },
+  { value: 3000 }, { value: 2000 }, { value: 2780 },
+];
+
+
+const xLabels = ['5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22'];
 
 function ActivityWidget() {
   return (
@@ -8,10 +20,14 @@ function ActivityWidget() {
       <Typography variant='h6' fontWeight={700} color={'primary.light'}>Activity</Typography>
 
       <BarChart
-        xAxis={[{ scaleType: 'band', data: ['group A', 'group B', 'group C'] }]}
-        series={[{ data: [4, 3, 5] }, { data: [1, 6, 3] }, { data: [2, 5, 6] }]}
         height={150}
+        series={[
+          { data: pData, label: 'pv', id: 'pvId' },
+        ]}
+        xAxis={[{ data: xLabels, scaleType: 'band' }]}
+        
       />
+      
     </Box>
   )
 }

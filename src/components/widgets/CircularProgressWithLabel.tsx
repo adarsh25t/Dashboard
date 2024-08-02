@@ -62,8 +62,8 @@ function CircularProgressWithLabel(
                         justifyContent: 'center',
                     }}
                 >
-                    <Typography sx={{ fontSize: "0.5rem" }}>Goal</Typography>
-                    <Typography sx={{ fontSize: "0.5rem" }}>Completed</Typography>
+                    <Typography sx={{ fontSize: "0.5rem" }} color={"primary.light"}>Goal</Typography>
+                    <Typography sx={{ fontSize: "0.5rem" }} color={"primary.light"}>Completed</Typography>
                 </Box>
             </Box>
         </Box>
@@ -71,12 +71,16 @@ function CircularProgressWithLabel(
 }
 
 export default function CircularWithValueLabel() {
-    const [progress, setProgress] = React.useState(70);
+    const [progress, setProgress] = React.useState(0);
+
+    React.useEffect(() => {
+        setProgress(70);
+      }, []);
 
     return (
     <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column",gap: "5px" }}>
         <CircularProgressWithLabel value={progress} />
-        <Typography sx={{ fontSize: "0.6rem" }}>*The values here has been rounded off.</Typography>
+        <Typography sx={{ fontSize: "0.6rem" }} color={"primary.light"}>*The values here has been rounded off.</Typography>
     </Box>
     );
 }

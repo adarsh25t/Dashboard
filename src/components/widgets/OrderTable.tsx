@@ -55,10 +55,10 @@ export default function OrderTable() {
               </TableCell>
               <TableCell align="left" sx={{ color: 'primary.light' }}>{row.order}</TableCell>
               <TableCell align="left" sx={{ color: 'primary.light' }}>$ {row.amount}</TableCell>
-              <TableCell align="left" sx={{ color: 'primary.light' }}>
+              <TableCell align="left">
                 {row.status === "Delivered" ? 
-                  <span style={{ color: '#2E7D32',backgroundColor: '#66BB6A', padding: '5px 8px', borderRadius: '25px' }}>{row.status}</span> : 
-                  <span style={{ color: 'red',backgroundColor: 'rgb(229, 115, 115)', padding: '5px 8px', borderRadius: '25px' }}>{row.status}</span>}
+                  <span style={{ color: '#66BB6A',backgroundColor: 'rgba(102, 187, 106, 0.27)', padding: '6px 14px', borderRadius: '30px' }}>{row.status}</span> : 
+                  <span style={{ color: '#F44336',backgroundColor: 'rgba(229, 115, 115, 0.28)', padding: '6px 14px', borderRadius: '30px' }}>{row.status}</span>}
               </TableCell>
             </TableRow>
           ))}

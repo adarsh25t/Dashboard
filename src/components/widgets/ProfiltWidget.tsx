@@ -10,6 +10,7 @@ const ProfiltWidget: React.FC = () => {
     <Card sx={{
       backgroundColor: "secondary.main",
       color: "primary.light",
+      borderRadius: "10px",
       '&:hover': {
         backgroundColor: "secondary.light",
         transition: 'all 0.4s ease',
@@ -21,8 +22,8 @@ const ProfiltWidget: React.FC = () => {
 
       <CardContent sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }} >
         <Box sx={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-          <Typography variant='subtitle1'>Net Profit</Typography>
-          <Typography variant='h4' color="primary.light" fontWeight={"bold"}>$ 6759.25</Typography>
+          <Typography variant='subtitle1' color={"primary.light"}>Net Profit</Typography>
+          <Typography variant='h4' sx={{ fontSize: { xs: "20px", sm: "20px", md: "30px" } }} color="primary.light" fontWeight={"bold"}>$ 6759.25</Typography>
           <Typography variant='subtitle1' color="green">
             <ArrowDropUpIcon />
             3%

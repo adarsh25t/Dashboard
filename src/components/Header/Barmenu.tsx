@@ -1,9 +1,13 @@
 import { Avatar, IconButton, Menu, MenuItem, Tooltip, Typography } from '@mui/material';
 import React, { useState } from 'react'
+import MenuIcon from '@mui/icons-material/Menu';
+import NotificationsIcon from '@mui/icons-material/Notifications';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import SettingsIcon from '@mui/icons-material/Settings';
+import HeaderUserProfile from './HeaderUserProfile';
 
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
-const HeaderUserProfile: React.FC = () => {
+const Barmenu: React.FC = () => {
 
     const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null);
 
@@ -18,8 +22,8 @@ const HeaderUserProfile: React.FC = () => {
     return (
         <>
             <Tooltip title="Open settings">
-                <IconButton onClick={handleOpenUserMenu} sx={{ marginRight: { xs: 1, md: 0 } }}>
-                    <Avatar alt="Remy Sharp" src="https://w0.peakpx.com/wallpaper/107/46/HD-wallpaper-best-pose-for-profile-for-men-profile-pose-men-best-glasses.jpg" />
+                <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                    <MenuIcon sx={{ color: "primary.light" }} />
                 </IconButton>
             </Tooltip>
             <Menu
@@ -38,14 +42,20 @@ const HeaderUserProfile: React.FC = () => {
                 open={Boolean(anchorElUser)}
                 onClose={handleCloseUserMenu}
             >
-                {settings.map((setting) => (
-                    <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                        <Typography textAlign="center">{setting}</Typography>
-                    </MenuItem>
-                ))}
+                <MenuItem onClick={handleCloseUserMenu}>
+                    <MailOutlineIcon />
+                </MenuItem>
+
+                <MenuItem onClick={handleCloseUserMenu}>
+                    <SettingsIcon />
+                </MenuItem>
+
+                <MenuItem onClick={handleCloseUserMenu}>
+                    <NotificationsIcon />
+                </MenuItem>
             </Menu>
         </>
     )
 }
 
-export default HeaderUserProfile;
+export default Barmenu;

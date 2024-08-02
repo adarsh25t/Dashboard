@@ -7,14 +7,20 @@ import RecentOrdersWidget from './widgets/RecentOrdersWidget'
 import FeedbackWidget from './widgets/FeedbackWidget'
 import ProfiltWidget from './widgets/ProfiltWidget'
 import FeatureSection from './widgets/FeatureSection'
+import MobileSlider from './MobileSlider'
 
 const DashboardContent: React.FC = () => {
   return (
     <Box flex={1} display="flex" flexDirection="column" gap={2} bgcolor={'background.default'}>
       <Box p={3}>
-        <h1 className='text-2xl font-bold mb-4 text-white'>Dashboard</h1>
+        <h1 className='text-2xl font-bold text-white'>Dashboard</h1>
 
         <Grid container spacing={3}>
+
+          <Grid item xs={12} >
+            <MobileSlider />
+          </Grid>
+
           <Grid item xs={12} sm={6} md={8}>
             <TotalOrdersWidget />
           </Grid>
