@@ -1,6 +1,9 @@
 # Dashboard
 A brief description of your project, its purpose, and what it aims to achieve.
 
+## Live Demo
+
+You can view the live demo of the project [here](https://dashboard-xi-brown-83.vercel.app/).
 
 ## About The Project
 This project is a responsive dashboard interface created using React.js, TypeScript, and Material-UI. It is designed to be a static, responsive dashboard that closely matches a provided UI design, with customizable colors, images, and font sizes.
@@ -21,11 +24,10 @@ To get a local copy up and running follow these simple steps.
 
 ### Installation
 1. Clone the repo
- - `git clone https://github.com/your_username_/Project-Name.git`
+ - `git clone https://github.com/adarsh25t/Dashboard`
 
 2. Install NPM packages
  - `npm install`
-
 
  #  Usage
 This project includes a sidebar and header that fit within the screen without scrolling. The dashboard content is displayed dynamically and includes various UI components like a bar chart created using @mui/x-charts.
