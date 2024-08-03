@@ -4,17 +4,12 @@ import KeyboardArrowRightTwoToneIcon from '@mui/icons-material/KeyboardArrowRigh
 import LunchDiningTwoToneIcon from '@mui/icons-material/LunchDiningTwoTone';
 import RamenDiningOutlinedIcon from '@mui/icons-material/RamenDiningOutlined';
 import React from 'react'
+import { FeatureSectionProps } from '../../lib/type';
 
-interface FeatureSection {
-    title: string;
-    iconBgColor: string;
-    iconColor: string;
-    icon: JSX.Element;
-}
 
 const FeatureSection: React.FC = () => {
 
-    const FeatureItem: React.FC<FeatureSection> = ({ title, iconColor, iconBgColor, icon }) => {
+    const FeatureItem: React.FC<FeatureSectionProps> = ({ title, iconColor, iconBgColor, icon }) => {
         return (
             <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <Box sx={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
@@ -54,8 +49,9 @@ const FeatureSection: React.FC = () => {
         <Box
             bgcolor={'secondary.main'}
             p={2}
-            sx={{ borderRadius: '10px' }}
+            sx={{ borderRadius: '10px', minHeight: "100%" }}
             display="flex"
+            justifyContent="space-around"
             flexDirection="column"
             gap={2.5}
         >

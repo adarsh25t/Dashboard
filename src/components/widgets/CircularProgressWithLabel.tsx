@@ -1,8 +1,7 @@
 import * as React from 'react';
-import CircularProgress, { circularProgressClasses, CircularProgressProps } from '@mui/material/CircularProgress';
+import CircularProgress, { CircularProgressProps } from '@mui/material/CircularProgress';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import { grey } from '@mui/material/colors';
 
 function CircularProgressWithLabel(
     props: CircularProgressProps & { value: number },
@@ -75,12 +74,12 @@ export default function CircularWithValueLabel() {
 
     React.useEffect(() => {
         setProgress(70);
-      }, []);
+    }, []);
 
     return (
-    <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column",gap: "5px" }}>
-        <CircularProgressWithLabel value={progress} />
-        <Typography sx={{ fontSize: "0.6rem" }} color={"primary.light"}>*The values here has been rounded off.</Typography>
-    </Box>
+        <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column", gap: "5px" }}>
+            <CircularProgressWithLabel value={progress} />
+            <Typography sx={{ fontSize: "0.6rem" }} color={"primary.light"}>*The values here has been rounded off.</Typography>
+        </Box>
     );
 }

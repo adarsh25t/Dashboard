@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box, List, ListItem, ListItemIcon, ListItemText } from '@mui/material';
+import { Box, List, ListItem, ListItemIcon } from '@mui/material';
 import HomeIcon from '@mui/icons-material/Home';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import GridViewIcon from '@mui/icons-material/GridView';
@@ -46,19 +46,19 @@ const Sidebar: React.FC = () => {
 
 
   return (
-    <Box 
-      width={80}  
-      bgcolor={'secondary.main'} 
-      p={2} 
-      sx={{ 
-        display: { xs: "none", sm: "flex" }, 
-        flexDirection: "column", 
-        justifyContent: "space-between", 
+    <Box
+      width={80}
+      bgcolor={'secondary.main'}
+      p={2}
+      sx={{
+        display: { xs: "none", sm: "flex" },
+        flexDirection: "column",
+        justifyContent: "space-between",
         alignItems: "center",
 
       }}
-     
-      >
+
+    >
       <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
         <Box>
           <GridViewIcon sx={{ color: blue[600], fontSize: "40px" }} />
@@ -111,9 +111,9 @@ const Sidebar: React.FC = () => {
       </Box>
 
       <Box>
-        <LogoutRoundedIcon sx={{ 
-          color: grey[400], 
-          fontSize: "25px", 
+        <LogoutRoundedIcon sx={{
+          color: grey[400],
+          fontSize: "25px",
           cursor: "pointer",
           '&:hover': {
             color: blue[600]

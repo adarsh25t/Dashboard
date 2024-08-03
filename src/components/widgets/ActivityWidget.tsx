@@ -1,35 +1,60 @@
-import { Box, Tooltip, Typography } from '@mui/material';
-import { BarChart } from '@mui/x-charts/BarChart';
-import React from 'react'
+import React from 'react';
+import { Box, Typography } from '@mui/material';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from 'recharts';
+import { data } from '../../assets/chartData';
+import { CustomBarProps } from '../../lib/type';
+import SelectBarchart from './SelectBarchart';
 
-const pData = [
-  { value: 4000 }, { value: 3000 }, { value: 2000 },
-  { value: 2780 }, { value: 1890 }, { value: 2390 },
-  { value: 3490 }, { value: 4000 }, { value: 3000 },
-  { value: 2000 }, { value: 2780 }, { value: 1890 },
-  { value: 2390 }, { value: 3490 }, { value: 4000 },
-  { value: 3000 }, { value: 2000 }, { value: 2780 },
-];
+const CustomBar: React.FC<CustomBarProps> = ({ fill, x, y, width, height }) => {
+  const radius = 15; // Radius for top and bottom border
 
+  return (
+    <g>
+      <rect
+        x={x}
+        y={y}
+        width={width}
+        height={height}
+        fill={fill}
+        rx={radius}
+        ry={radius}
+      />
+    </g>
+  );
+};
 
-const xLabels = ['5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22'];
-
-function ActivityWidget() {
+const ActivityWidget: React.FC = () => {
   return (
     <Box bgcolor={'secondary.main'} p={2} sx={{ borderRadius: '10px' }}>
-      <Typography variant='h6' fontWeight={700} color={'primary.light'}>Activity</Typography>
+      <Box display={'flex'} justifyContent={'space-between'} alignItems={'center'}>
+        <Typography variant='h6' fontWeight={700} color={'primary.light'}>Activity</Typography>
+        <SelectBarchart />
+      </Box>
 
-      <BarChart
-        height={150}
-        series={[
-          { data: pData, label: 'pv', id: 'pvId' },
-        ]}
-        xAxis={[{ data: xLabels, scaleType: 'band' }]}
-        
-      />
-      
+      <ResponsiveContainer width="100%" height={150}>
+        <BarChart
+          width={900}
+          height={150}
+          data={data}
+          margin={{ top: 15 }}
+        >
+          <CartesianGrid strokeDasharray="1 9" />
+          <XAxis dataKey="name" />
+          <YAxis />
+          <Bar 
+            dataKey="pv" 
+            fill="#1976d2"
+            shape={(props: any) => <CustomBar {...props} />}
+          />
+          <Bar 
+            dataKey="uv" 
+            fill="#1976d2"
+            shape={(props: any) => <CustomBar {...props} />}
+          />
+        </BarChart>
+      </ResponsiveContainer>
     </Box>
-  )
-}
+  );
+};
 
-export default ActivityWidget
+export default ActivityWidget;

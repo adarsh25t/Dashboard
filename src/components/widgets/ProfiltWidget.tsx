@@ -1,8 +1,7 @@
-import { Box, Card, CardContent, Grid, Typography } from '@mui/material'
+import { Box, Card, CardContent, Typography } from '@mui/material'
 import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
 import React from 'react'
 import CircularWithValueLabel from './CircularProgressWithLabel';
-
 
 
 const ProfiltWidget: React.FC = () => {

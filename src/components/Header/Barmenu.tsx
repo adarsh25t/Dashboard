@@ -1,11 +1,9 @@
-import { Avatar, IconButton, Menu, MenuItem, Tooltip, Typography } from '@mui/material';
+import { IconButton, Menu, MenuItem, Tooltip } from '@mui/material';
 import React, { useState } from 'react'
 import MenuIcon from '@mui/icons-material/Menu';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import SettingsIcon from '@mui/icons-material/Settings';
-import HeaderUserProfile from './HeaderUserProfile';
-
 
 const Barmenu: React.FC = () => {
 

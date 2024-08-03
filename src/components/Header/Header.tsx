@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { AppBar, Toolbar, IconButton, InputBase, Box, Tooltip, Avatar, Menu, MenuItem, Typography, styled } from '@mui/material';
+import React from 'react';
+import { AppBar, Toolbar, IconButton, InputBase, Box } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
@@ -10,7 +10,6 @@ import Barmenu from './Barmenu';
 
 
 const Header: React.FC = () => {
-
 
     const IconComponent = ({ children }: { children: React.ReactNode }) => {
         return (
@@ -30,8 +29,6 @@ const Header: React.FC = () => {
             </IconButton>
         );
     };
-
-
 
     return (
         <AppBar
@@ -54,13 +51,13 @@ const Header: React.FC = () => {
                         startAdornment={<SearchIcon sx={{ paddingRight: "5px" }} />}
                     />
                 </Box>
-                
+
                 <Box sx={{ display: { xs: 'block', sm: 'none' } }}>
                     <Barmenu />
                 </Box>
-                
+
                 <Box display="flex" gap={3}>
-                    <Box  gap={1} sx={{ display: { xs: 'none', sm: 'flex',alignItems: 'center' } }}>
+                    <Box gap={1} sx={{ display: { xs: 'none', sm: 'flex', alignItems: 'center' } }}>
                         <IconComponent>
                             <MailOutlineIcon />
                         </IconComponent>
@@ -73,7 +70,7 @@ const Header: React.FC = () => {
                             <NotificationsIcon />
                         </IconComponent>
                     </Box>
-                    
+
                     <Box>
                         <HeaderUserProfile />
                     </Box>

@@ -1,5 +1,4 @@
 import { Box, Grid } from '@mui/material'
-import { blueGrey } from '@mui/material/colors'
 import React from 'react'
 import TotalOrdersWidget from './widgets/TotalOrdersWidget'
 import ActivityWidget from './widgets/ActivityWidget'
@@ -21,26 +20,26 @@ const DashboardContent: React.FC = () => {
             <MobileSlider />
           </Grid>
 
-          <Grid item xs={12} sm={6} md={8}>
+          <Grid item xs={12} sm={12} md={8}>
             <TotalOrdersWidget />
           </Grid>
-          <Grid item xs={12} sm={6} md={4}>
+          <Grid item xs={12} sm={12} md={4}>
             <ProfiltWidget />
           </Grid>
 
-          <Grid item xs={12} sm={6} md={8}>
+          <Grid item xs={12} sm={12} md={8}>
             <ActivityWidget />
           </Grid>
 
-          <Grid item xs={12} sm={6} md={4}>
+          <Grid item xs={12} sm={12} md={4}>
             <FeatureSection />
           </Grid>
 
 
-          <Grid item xs={12} sm={6} md={8}>
+          <Grid item xs={12} sm={12} md={8}>
             <RecentOrdersWidget />
           </Grid>
-          <Grid item xs={12} sm={6} md={4}>
+          <Grid item xs={12} sm={12} md={4}>
             <FeedbackWidget />
           </Grid>
         </Grid>

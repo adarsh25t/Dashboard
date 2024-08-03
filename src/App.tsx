@@ -3,7 +3,6 @@ import './App.css'
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import DashboardLayout from './components/DashboardLayout';
 
-
 const theme = createTheme({
   palette: {
     primary: {
@@ -21,9 +20,9 @@ const theme = createTheme({
 
 const App: React.FC = () => {
   return (
-  <ThemeProvider theme={theme}>
-    <DashboardLayout />
-  </ThemeProvider>)
+    <ThemeProvider theme={theme}>
+      <DashboardLayout />
+    </ThemeProvider>)
 }
 
 export default App;

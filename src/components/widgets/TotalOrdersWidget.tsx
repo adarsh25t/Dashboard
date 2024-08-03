@@ -9,12 +9,12 @@ import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 const TotalOrdersWidget: React.FC = () => {
 
-  const CardItem: React.FC<CardItemProps> = ({ title, value, icon, percentage, iconBgColor,iconColor, percentageColor }) => {
+  const CardItem: React.FC<CardItemProps> = ({ title, value, icon, percentage, iconBgColor, iconColor, percentageColor }) => {
     return (
-      <Card sx={{ 
-        backgroundColor: "secondary.main", 
+      <Card sx={{
+        backgroundColor: "secondary.main",
         color: "primary.light",
-        borderRadius:"10px",
+        borderRadius: "10px",
         '&:hover': {
           backgroundColor: "secondary.light",
           transition: 'all 0.4s ease',

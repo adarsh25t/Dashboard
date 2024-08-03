@@ -1,4 +1,4 @@
-import { Box, Card, CardContent, Rating, Typography } from '@mui/material'
+import { Box, Rating, Typography } from '@mui/material'
 import StarIcon from '@mui/icons-material/Star';
 import React from 'react'
 import { FeedbackProps } from '../../lib/type';
@@ -39,7 +39,7 @@ function FeedbackWidget() {
   }
 
   return (
-    <Box bgcolor={'secondary.main'} p={2} sx={{ height: "450px", overflowY: "scroll",borderRadius: '10px' }}>
+    <Box bgcolor={'secondary.main'} p={2} sx={{ height: "450px", overflowY: "scroll", borderRadius: '10px' }}>
       <Typography variant='h6' fontWeight={700} color={'primary.light'}>Customer Feedback</Typography>
 
       <Box mt={2} display={'flex'} gap={3} flexWrap={'wrap'}>

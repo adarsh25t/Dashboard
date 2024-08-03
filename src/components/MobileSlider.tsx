@@ -1,16 +1,12 @@
 import React, { useState } from 'react';
-import { Box, List, ListItem, ListItemIcon, ListItemText } from '@mui/material';
+import { Box, List, ListItem, ListItemIcon } from '@mui/material';
 import HomeIcon from '@mui/icons-material/Home';
 import BarChartIcon from '@mui/icons-material/BarChart';
-import GridViewIcon from '@mui/icons-material/GridView';
 import { blue, grey } from '@mui/material/colors';
 import LocalMallOutlinedIcon from '@mui/icons-material/LocalMallOutlined';
 import AccountBalanceWalletOutlinedIcon from '@mui/icons-material/AccountBalanceWalletOutlined';
 import AssignmentTurnedInOutlinedIcon from '@mui/icons-material/AssignmentTurnedInOutlined';
-import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded';
 import { ListItemComponentProps } from '../lib/type';
-
-
 
 const ListItemComponent: React.FC<ListItemComponentProps> = ({ children, selected, onClick }) => {
     return (

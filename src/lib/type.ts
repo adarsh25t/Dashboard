@@ -1,3 +1,4 @@
+import { BarProps } from "recharts";
 
 export interface ListItemComponentProps {
     children: React.ReactNode;
@@ -22,3 +23,22 @@ export interface FeedbackProps {
   rating: number;
 }
  
+export interface Data {
+  name: string;
+  pv: number;
+  uv: number;
+}
+export interface CustomBarProps extends BarProps {
+  fill: string;
+  x: number;
+  y: number;
+  width: number;
+  height: number;
+}
+
+export interface FeatureSectionProps {
+  title: string;
+  iconBgColor: string;
+  iconColor: string;
+  icon: JSX.Element;
+}
